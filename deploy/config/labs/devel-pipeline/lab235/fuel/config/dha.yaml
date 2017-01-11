@@ -1,0 +1,45 @@
+##############################################################################
+# Copyright (c) 2015 Ericsson AB and others.
+# stefan.k.berg@ericsson.com
+# jonas.bjurel@ericsson.com
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Apache License, Version 2.0
+# which accompanies this distribution, and is available at
+# http://www.apache.org/licenses/LICENSE-2.0
+##############################################################################
+dha-pod-config-metadata:
+  title: Deployment Hardware Adapter (DHA) for fuel development pipeline - Ericsson ELX version mod for EETAC lab235
+  version: 0.0.3
+  created: Jan 4 2016
+  comment: lab235 Fuel 9 version
+
+# Adapter to use for this definition
+adapter: compaq
+#adapter: hp 
+
+# Node list.
+# Mandatory property is id, all other properties are adapter specific.
+
+nodes:
+- id: 1
+  pxeMac: 78:e7:d1:c6:69:d9
+- id: 2
+  pxeMac: 78:e7:d1:89:91:5d
+- id: 3
+  pxeMac: 78:e7:d1:c6:68:87
+- id: 4
+#  pxeMac: 78:e7:d1:c6:68:e2
+  pxeMac: 78:e7:d1:c6:68:ab
+- id: 5
+  pxeMac: 78:e7:d1:c6:68:fa
+# Adding the Fuel node as node id 6 which may not be correct - please
+# adjust as needed.
+- id: 6
+  libvirtName: fuel-opnfv
+  libvirtTemplate: templates/lab235/vms/fuel.xml
+  isFuel: yes
+  username: root
+  password: r00tme
+
+disks:
+  fuel: 100G
