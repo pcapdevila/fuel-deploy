@@ -16,6 +16,7 @@ from dha_adapters.ipmi_adapter import IpmiAdapter
 from dha_adapters.hp_adapter import HpAdapter
 from dha_adapters.amt_adapter import AmtAdapter
 from dha_adapters.zte_adapter import ZteAdapter
+from dha_adapters.compaq_adapter import CompaqAdapter
 
 class DeploymentHardwareAdapter(object):
 
@@ -35,4 +36,6 @@ class DeploymentHardwareAdapter(object):
                 return AmtAdapter(yaml_path)
             if type == 'zte':
                 return ZteAdapter(yaml_path)
+            if type == 'compaq':
+                return CompaqAdapter(yaml_path)
         return super(DeploymentHardwareAdapter, cls).__new__(cls)
