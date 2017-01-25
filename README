@@ -1,3 +1,12 @@
+
+This repo is a fork of https://gerrit.opnfv.org/gerrit/fuel to customize several
+configuration files and scripts within the works done in the master thesis called:
+
+Deployment of NFV SFC scenarios
+
+by Pau Capdevila i Pujol
+directed by David Rincon Rivera
+
 ##############################################################################
 # Copyright (c) 2015 Ericsson AB and others.
 # stefan.k.berg@ericsson.com
